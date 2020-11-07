@@ -15,8 +15,5 @@ Button.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 };
 
-Button.defaultProps = {
-  // bla: 'test',
-};
 
 export default Button;

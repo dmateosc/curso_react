@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes, { number } from "prop-types";
+import PropTypes from "prop-types";
 import Button from "../Button";
 //import { Test } from './Numbers.styles';
 
@@ -20,8 +20,5 @@ Numbers.propTypes = {
   onClickNumber: PropTypes.func.isRequired,
 };
 
-Numbers.defaultProps = {
-  // bla: 'test',
-};
 
 export default Numbers;

@@ -7,8 +7,7 @@ Result.propTypes = {
 };
 
 Result.defaultProps = {
-  value: "0",
-  prop1: "Hola",
+  value: "",
 };
 
 export default Result;

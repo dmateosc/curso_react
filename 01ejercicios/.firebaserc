@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "calc-app-dmc",
+    "react-calc": "react-calc-6105c"
+  }
+}
