@@ -8,7 +8,8 @@ const Seconds = () => {
           setSeconds( seconds + 1);
       }, 1000);
 
-      //clearInterval(intervalId);
+      //funcion de retorno para cuando se apaga
+      return () => {clearInterval(intervalId)}
   }, [seconds]);
 
   return seconds
