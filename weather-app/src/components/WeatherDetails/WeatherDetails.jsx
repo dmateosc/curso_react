@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Typography from "@material-ui/core/Typography";
 //import { Test } from './WeatherDetails.styles';
 
-const WeatherDetails = (props) => (
-  <div className="WeatherDetailsWrapper">
-    Test content
-  </div>
+const WeatherDetails = ({humidity, wind}) => (
+  <>
+   <Typography>Humedad: {humidity}%</Typography>
+   <Typography>{wind}</Typography>
+  </>
 );
 
 WeatherDetails.propTypes = {
-  // bla: PropTypes.string,
+  humidity: PropTypes.number.isRequired
+  , wind: PropTypes.number.isRequired
 };
 
 WeatherDetails.defaultProps = {
