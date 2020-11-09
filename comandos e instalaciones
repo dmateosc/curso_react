@@ -2,4 +2,6 @@ npm install @material-ui/core
 npx -p @storybook/cli sb init
 npm run storybook 
 
+npm i --save-dev @storybook/addon-viewport
+
 npx sb upgrade
