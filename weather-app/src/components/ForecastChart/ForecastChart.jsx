@@ -1,0 +1,41 @@
+import React from "react";
+import PropTypes from "prop-types";
+import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from "recharts";
+//import { Test } from './ForecastCharts.styles';
+
+const ForecastChart = ({ data }) => {
+  return (
+    <>
+      <LineChart
+        height={250}
+        width={700}
+        margin={{ top: 20, bottom: 20, left: 5, right: 5 }}
+        data={data}
+      >
+        <XAxis dataKey="dayHour"></XAxis>
+        <YAxis ></YAxis>
+        <Tooltip></Tooltip>
+        <Legend></Legend>
+        <CartesianGrid></CartesianGrid>
+        <Line type="monotone" dataKey="min" stroke="#FF0000"></Line>
+        <Line type="monotone" dataKey="max" stroke="#0000FF"></Line>
+      </LineChart>
+    </>
+  );
+};
+
+ForecastChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      dayHour: PropTypes.string.isRequired,
+      min: PropTypes.number.isRequired,
+      max: PropTypes.number.isRequired,
+    })
+  ),
+};
+
+ForecastChart.defaultProps = {
+  // bla: 'test',
+};
+
+export default ForecastChart;

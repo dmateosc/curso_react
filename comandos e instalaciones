@@ -3,6 +3,8 @@ npx -p @storybook/cli sb init
 npm i --save-dev @storybook/addon-viewport
 npx sb upgrade
 
+#graficos
+npm install recharts
 
 
 npm run storybook 
