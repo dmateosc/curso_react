@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import Typography from "@material-ui/core/Typography";
 //import { Test } from './WeatherDetails.styles';
 
-const WeatherDetails = ({humidity, wind}) => (
+const WeatherDetails = ({humidity, wind}) => {
+  return(
   <>
    <Typography>Humedad: {humidity}%</Typography>
-   <Typography>{wind}</Typography>
-  </>
-);
+   <Typography>Viento: {wind} km/h</Typography>
+  </>)
+};
 
 WeatherDetails.propTypes = {
   humidity: PropTypes.number.isRequired
