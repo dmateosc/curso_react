@@ -1,7 +1,16 @@
+npx create-react-app my-app
+
+npm start
+
+
 npm install @material-ui/core
 npx -p @storybook/cli sb init
 npm i --save-dev @storybook/addon-viewport
 npx sb upgrade
+
+npm install react-icons
+
+npm install react-router-dom
 
 #graficos
 npm install recharts

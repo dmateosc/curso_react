@@ -9,10 +9,10 @@ import {
   WiRain,
 } from "react-icons/wi";
 
-export const validValues = ["cloud", "clody", "fog", "sunny", "rain"];
+export const validValues = ["cloud", "cloudy", "fog", "sunny", "rain"];
 const stateByName = {
   cloud: WiCloud,
-  clody: WiDayCloudy,
+  cloudy: WiDayCloudy,
   fog: WiDayFog,
   sunny: WiDaySunny,
   rain: WiRain,
@@ -20,7 +20,7 @@ const stateByName = {
 
 const IconState = ({ state }) => {
   const Icon = stateByName[state];
-  return <>{<Icon></Icon>}</>;
+  return (<Icon></Icon>);
 };
 IconState.propTypes = {
   state: PropTypes.oneOf(validValues).isRequired,

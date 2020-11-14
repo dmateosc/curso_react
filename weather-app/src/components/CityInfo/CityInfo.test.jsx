@@ -3,6 +3,12 @@ import {render} from '@testing-library/react'
 import CityInfo from './CityInfo'
 import '@testing-library/jest-dom/extend-expect'
 
+it('CityInfo test', ()=> {
+
+
+
+})
+
 test('CityInfo render', async () => {
     
 
