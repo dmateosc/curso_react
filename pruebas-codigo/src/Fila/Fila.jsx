@@ -2,10 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 //import { Test } from './Fila.styles';
 
-const Fila = (props) => (
-  <div className="FilaWrapper">
-    Test content
-  </div>
+const Fila = ({serie}) => (
+ <>
+ <span>{`Serie nº ${serie}`}</span>
+ <form action="">
+  <label htmlFor="">Peso </label><input type="text" placeholder="Añade el peso"/>
+  <label htmlFor="">Repeticion </label><input type="text" placeholder="Añade las repeticiones"/>
+
+ </form>
+ </>
 );
 
 Fila.propTypes = {
