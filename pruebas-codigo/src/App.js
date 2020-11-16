@@ -8,6 +8,7 @@ function App() {
     <>
 
     <Tabla></Tabla>
+    <Tabla></Tabla>
     </>
 
   );
