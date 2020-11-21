@@ -26,7 +26,7 @@ const Tabla = (props) => {
         <Fila key={rowsValue} serie={rowsValue}></Fila>
       </div>
     );
-    //IMportante se añade el onclick con () para que la función solo pueda ser llamda una vez has clickado
+    //IMportante se añade el onclick con () para que la función solo pueda ser llamada una vez has clickado
     var clickBorrar = (
       <div>
         <Fila key={rowsValue} serie={rowsValue}></Fila>

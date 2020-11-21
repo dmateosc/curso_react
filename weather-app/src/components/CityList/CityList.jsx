@@ -13,10 +13,10 @@ const renderCityAndCountry = (eventOnClickCity) => {
     return (
       <ListItem button key={city} onClick={eventOnClickCity}>
         <Grid container justify="center" alignItems="center">
-          <Grid item sm={8} xs={12}>
+          <Grid item sm={9} xs={12}>
             <CityInfo city={city} country={country}></CityInfo>
           </Grid>
-          <Grid item sm={4} xs={12}>
+          <Grid item sm={3} xs={12}>
             <Weather temperature={"10"} state="sunny"></Weather>
           </Grid>
         </Grid>

@@ -15,5 +15,8 @@ npm install react-router-dom
 #graficos
 npm install recharts
 
+#animaciones
+npm install vanta
+npm install three
 
 npm run storybook 

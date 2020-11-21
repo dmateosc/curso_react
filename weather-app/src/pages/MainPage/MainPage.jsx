@@ -1,9 +1,9 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import Paper from '@material-ui/core/Paper'
+import AppFrame from "../../components/AppFrame";
 import CityList from "./../../components/CityList";
 //import { Test } from './MainPage.styles';
-
 
 const cities = [
   {
@@ -21,7 +21,7 @@ const cities = [
   {
     city: "Lisboa",
     country: "Portugal",
-  }
+  },
 ];
 
 const MainPage = (props) => {
@@ -31,10 +31,11 @@ const MainPage = (props) => {
     history.push("/city");
   };
   return (
-    <div className="MainPageWrapper">
-      <h2>Lista de ciudades</h2>
+    <AppFrame>
+      <Paper elevation={3}>
       <CityList cities={cities} onClickCity={onClickHandler}></CityList>
-    </div>
+      </Paper>
+    </AppFrame>
   );
 };
 

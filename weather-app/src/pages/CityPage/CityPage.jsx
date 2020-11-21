@@ -5,7 +5,8 @@ import Weather from "./../../components/Weather";
 import WeatherDetails from "./../../components/WeatherDetails";
 import ForecastChart from "./../../components/ForecastChart";
 import Forecast from "./../../components/Forecast";
-import { Link } from "react-router-dom";
+import Paper from "@material-ui/core/Paper";
+import AppFrame from "../../components/AppFrame";
 
 //import { Test } from './CityPage.styles';
 const dataForecast = [
@@ -84,21 +85,25 @@ const CityPage = () => {
   const data = dataForecast;
   const forecastItemList = itemsExample;
   return (
-    <Grid container justify="space-around" directon="column" spacing={2}>
-      <Grid item container xs={12} justify="center" alignItems="flex-end">
-        <CityInfo city={city} country={country}></CityInfo>
-      </Grid>
-      <Grid container item xs={8} justify="center">
-        <Weather state={state} temperature={temperature}></Weather>
-        <WeatherDetails humidity={humidity} wind={wind}></WeatherDetails>
-      </Grid>
-      <Grid item xs={12}>
-        <ForecastChart data={data}></ForecastChart>
-      </Grid>
-      <Grid item>
-        <Forecast forecastItemList={forecastItemList}></Forecast>
-      </Grid>
-    </Grid>
+    <AppFrame>
+      <Paper elevation={3}>
+        <Grid container justify="space-around" directon="column" spacing={2}>
+          <Grid item container xs={12} justify="center" alignItems="flex-end">
+            <CityInfo city={city} country={country}></CityInfo>
+          </Grid>
+          <Grid container item xs={8} justify="center">
+            <Weather state={state} temperature={temperature}></Weather>
+            <WeatherDetails humidity={humidity} wind={wind}></WeatherDetails>
+          </Grid>
+          <Grid item xs={12}>
+            <ForecastChart data={data}></ForecastChart>
+          </Grid>
+          <Grid item>
+            <Forecast forecastItemList={forecastItemList}></Forecast>
+          </Grid>
+        </Grid>
+      </Paper>
+    </AppFrame>
   );
 };
 
