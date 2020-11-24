@@ -19,4 +19,11 @@ npm install recharts
 npm install vanta
 npm install three
 
+#http
+npm install axios
+
+#skeleton
+npm install @material-ui/lab
+
+
 npm run storybook 

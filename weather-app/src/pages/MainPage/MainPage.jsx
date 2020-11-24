@@ -9,20 +9,26 @@ const cities = [
   {
     city: "Madrid",
     country: "España",
+    countryCode: "ES"
   },
   {
     city: "Londres",
     country: "Reino Unido",
+    countryCode: "GB"
   },
   {
     city: "Barcelona",
     country: "España",
+    countryCode: "ES"
   },
   {
     city: "Lisboa",
     country: "Portugal",
+    countryCode: "PT"
   },
 ];
+
+
 
 const MainPage = (props) => {
   const history = useHistory();
