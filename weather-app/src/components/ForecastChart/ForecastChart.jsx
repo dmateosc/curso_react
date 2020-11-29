@@ -15,12 +15,14 @@ const ForecastChart = ({ data }) => {
         data={data}
       >
         <XAxis dataKey="dayHour"></XAxis>
+        
         <YAxis ></YAxis>
+        <CartesianGrid></CartesianGrid>
         <Tooltip></Tooltip>
         <Legend></Legend>
-        <CartesianGrid></CartesianGrid>
-        <Line type="monotone" dataKey="min" stroke="#FF0000"></Line>
-        <Line type="monotone" dataKey="max" stroke="#0000FF"></Line>
+        
+        <Line type="monotone" dataKey={"max"} stroke="#FF0000"></Line>
+        <Line type="monotone" dataKey={"min"} stroke="#0000FF"></Line>
       </LineChart>
       </ResponsiveContainer>
     </>

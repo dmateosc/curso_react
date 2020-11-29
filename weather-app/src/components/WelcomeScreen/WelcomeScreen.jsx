@@ -1,32 +1,12 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import Clouds from "vanta/dist/vanta.clouds.min";
-import * as THREE from "three";
+import useVanta from "./../../hooks/useVanta"
 //import { Test } from './WellcomeScreen.styles';
 
+
 const WelcomeScreen = ({ children }) => {
-  const myRefDiv = useRef(null);
-  const [vanta, setVanta] = useState(0); //valor inicial a 0
-
-  useEffect(() => {
-    console.log("MyRefDiv.current (en UseEffect", myRefDiv.current);
-    // Solo pasa una vez por dentro del if
-    if (!vanta) {
-      //SOLO PASA UNA VEZ
-      setVanta(
-        Clouds({
-          THREE,
-          el: myRefDiv.current,
-        })
-      );
-    }
-    return () => {
-      if (vanta) {
-        vanta.destroy();
-      }
-    };
-  }, [vanta]);
-
+  
+  const myRefDiv = useVanta()
   //En la primera renderización
   console.log(myRefDiv.current);
   return (
